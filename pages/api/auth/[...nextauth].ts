@@ -19,6 +19,7 @@ export const authOptions: NextAuthOptions = {
   // },
   callbacks: {
     redirect({ url, baseUrl }: { url: string; baseUrl: string }) {
+      console.log("callback", url, baseUrl)
       return url.startsWith(baseUrl)
         ? Promise.resolve(url)
         : Promise.resolve(baseUrl)
