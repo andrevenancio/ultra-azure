@@ -18,7 +18,7 @@ export const authOptions: NextAuthOptions = {
   //   strategy: "jwt",
   // },
   callbacks: {
-    redirect(url: string, baseUrl: string) {
+    redirect({ url, baseUrl }: { url: string; baseUrl: string }) {
       return url.startsWith(baseUrl)
         ? Promise.resolve(url)
         : Promise.resolve(baseUrl)
