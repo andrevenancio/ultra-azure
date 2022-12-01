@@ -6,7 +6,7 @@ export default function Component() {
   if (session) {
     return (
       <>
-        Signed in
+        Signed in {session.user?.email}
         <br />
         <button onClick={() => signOut()}>Sign out</button>
       </>
