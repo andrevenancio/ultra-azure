@@ -2,9 +2,11 @@ import "../styles/globals.css"
 import type { AppProps } from "next/app"
 import { SessionProvider } from "next-auth/react"
 
-export default function App(props: AppProps) {
-  const { Component, pageProps, session } = props
-  console.log("app page props", props)
+export default function App({
+  Component,
+  pageProps: { session, pageProps },
+}: AppProps) {
+  console.log("app page props", pageProps, session)
   return (
     <SessionProvider session={session}>
       <Component {...pageProps} />
