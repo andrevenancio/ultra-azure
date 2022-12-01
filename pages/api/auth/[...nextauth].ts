@@ -17,5 +17,13 @@ export const authOptions: NextAuthOptions = {
   // session: {
   //   strategy: "jwt",
   // },
+  callbacks: {
+    redirect(url: string, baseUrl: string) {
+      return url.startsWith(baseUrl)
+        ? Promise.resolve(url)
+        : Promise.resolve(baseUrl)
+    },
+  },
+  debug: true,
 }
 export default NextAuth(authOptions)

@@ -8,7 +8,11 @@ export default function Component() {
       <>
         Signed in {session.user?.email}
         <br />
-        <button onClick={() => signOut()}>Sign out</button>
+        <button
+          onClick={() => signOut({ callbackUrl: process.env.NEXTAUTH_URL })}
+        >
+          Sign out
+        </button>
       </>
     )
   }
@@ -17,7 +21,13 @@ export default function Component() {
     <>
       Not signed in
       <br />
-      <button onClick={() => signIn()}>Sign in</button>
+      <button
+        onClick={() =>
+          signIn(undefined, { callbackUrl: process.env.NEXTAUTH_URL! })
+        }
+      >
+        Sign in
+      </button>
     </>
   )
 }
