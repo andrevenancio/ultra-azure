@@ -3,12 +3,12 @@ import type { NextApiRequest, NextApiResponse } from "next"
 
 type Data = {
   name: string
-  env?: string
+  env?: any
 }
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: "John Doe", env: process.env.NEXTAUTH_URL })
+  res.status(200).json({ name: "test", env: process.env })
 }
