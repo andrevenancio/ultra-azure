@@ -33,6 +33,7 @@ jobs:
           ###### End of Repository/Build Configurations ######
         env:
           NEXTAUTH_URL: https://thankful-grass-0adbe8210.2.azurestaticapps.net
+          NEXT_PUBLIC_NEXTAUTH_URL: https://ABCthankful-grass-0adbe8210.2.azurestaticapps.net
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
