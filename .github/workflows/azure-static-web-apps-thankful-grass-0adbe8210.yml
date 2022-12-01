@@ -33,6 +33,8 @@ jobs:
           ###### End of Repository/Build Configurations ######
         env:
           NEXTAUTH_URL: https://thankful-grass-0adbe8210.2.azurestaticapps.net
+          GOOGLE_CLIENT_ID: 1091329368083-e5ed9nf26pr6m6m2ckhpdncobgd8cfbr.apps.googleusercontent.com
+          GOOGLE_CLIENT_SECRET: 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
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
