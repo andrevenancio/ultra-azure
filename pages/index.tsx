@@ -16,12 +16,15 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://ultra.unity.com">Ultra</a>
         </h1>
-        <p>{process.env.GITHUB_CLIENT_SECRET}</p>
-        <p>{process.env.NEXTAUTH_SECRET}</p>
-        <p>{process.env.GITHUB_CLIENT_ID}</p>
+        <h2>Next auth</h2>
         <p>{process.env.NEXTAUTH_URL}</p>
+        <p>{process.env.NEXTAUTH_SECRET}</p>
+        <h2>Google</h2>
         <p>{process.env.GOOGLE_CLIENT_ID}</p>
         <p>{process.env.GOOGLE_CLIENT_SECRET}</p>
+        <h2>Github</h2>
+        <p>{process.env.GITHUB_CLIENT_SECRET}</p>
+        <p>{process.env.GITHUB_CLIENT_ID}</p>
         <p className={styles.description}>
           <Button />
         </p>
