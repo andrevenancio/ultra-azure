@@ -32,7 +32,7 @@ jobs:
           output_location: "" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env:
-          NEXT_PUBLIC_NEXTAUTH_URL: https://thankful-grass-0adbe8210.2.azurestaticapps.net
+          NEXTAUTH_URL: https://thankful-grass-0adbe8210.2.azurestaticapps.net
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
