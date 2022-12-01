@@ -16,6 +16,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://ultra.unity.com">Ultra</a>
         </h1>
+        <p>NEXTAUTH_URL: {process.env.NEXTAUTH_URL}</p>
         <p className={styles.description}>
           <Button />
         </p>
